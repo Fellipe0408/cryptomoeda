@@ -24,6 +24,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -43,8 +44,11 @@ nav ul li a:hover {
 
 .main {
     padding: 40px;
-    max-width: 800px;
+    max-width: 1200px; /* Aumentando o limite máximo para telas grandes */
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .box {
@@ -52,6 +56,9 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    max-width: 800px;
+    width: 100%; /* Faz a caixa se expandir corretamente */
+    text-align: left;
 }
 
 h2 {
@@ -65,7 +72,42 @@ hr {
 }
 
 .converter {
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.converter select,
+.converter input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.converter button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.converter button:hover {
+    background-color: #ff9900;
 }
 
 form {
@@ -78,6 +120,8 @@ input[type="number"] {
     border: none;
     outline: none;
     font-size: 16px;
+    width: 100%;
+    max-width: 300px;
 }
 
 button {
@@ -101,6 +145,25 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
 img {
     border-radius: 50px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main {
+        padding: 20px;
+    }
+    
+    .box {
+        padding: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
