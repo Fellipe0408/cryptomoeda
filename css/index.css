@@ -36,7 +36,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    
+
 }
 
 nav ul li a:hover {
@@ -45,7 +45,8 @@ nav ul li a:hover {
 
 .main {
     padding: 40px;
-    max-width: 1200px; /* Aumentando o limite máximo para telas grandes */
+    max-width: 1200px;
+    /* Aumentando o limite máximo para telas grandes */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -58,7 +59,8 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
     max-width: 800px;
-    width: 100%; /* Faz a caixa se expandir corretamente */
+    width: 100%;
+    /* Faz a caixa se expandir corretamente */
     text-align: left;
 }
 
@@ -158,13 +160,49 @@ img {
     .main {
         padding: 20px;
     }
-    
+
     .box {
         padding: 15px;
     }
-    
     nav ul {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.pagina {
+
+    scale: 1.5;
+    width: 52px;
+    padding: 8px;
+    padding-left: 8px;
+    background-color: #0f3460;
+    border: 3px solid black;
+    text-align: left;
+    margin-left: 48%;
+    display: block;
+    
+}
+
+a {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 200px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+    from {
+        transform: translate(100%);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
