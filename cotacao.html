@@ -13,16 +13,21 @@
 
 <body class="@media">
     <header>
-        <img src="imagens/DALL·E 2025-02-25 14.41.04 - A simple, clean, and modern logo for 'CrypterraX', a cryptocurrency brand. The design should use a sleek, sans-serif font with a minimalist approach. .webp"
-            width="200" height="200" alt="CrypterraX logo">
-        <h1>CrypterraX</h1>
+        <a href="./index.html" class="img-header"> <img
+                src="imagens/DALL·E 2025-02-25 14.41.04 - A simple, clean, and modern logo for 'CrypterraX', a cryptocurrency brand. The design should use a sleek, sans-serif font with a minimalist approach. .webp"
+                width="200" height="200" alt="CrypterraX logo">
+            <h1>CrypterraX</h1>
+        </a>
+
         <br>
         <h2 style="text-align: center;">TRANSFORMANDO SEU HOJE PARA UM FUTURO FINANCEIRO SEM FRONTEIRAS</h2>
     </header>
     <nav>
         <ul type="square">
-            <li><a href="#Converter" class="marquee .main">Converter Dinheiro em Bitcoin</a></li>
-            <li><a href="blog.html" class="marquee .main">Últimas notícias</a></li>
+            <li><a href="index.html" class="marquee">Home</a></li>
+            <li><a href="cotacao.html">Converter Dinheiro em Bitcoin</a></li>
+            <li><a href="blog.html">Notícias</a></li>
+            <li><a href="sobre.html" class="marquee">Cryptomoeda</a></li>
         </ul>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -37,7 +42,7 @@
                                     "largeChartUrl": "",
                                         "isTransparent": true,
                                             "showSymbolLogo": true,
-                                                "width": "300", 
+                                                "width": "300",
                                                     "height": "450",
                                                         "symbolsGroups": [
                                                             {
@@ -74,10 +79,6 @@
             <p id="resultado">Insira o valor para ver o equivalente.</p>
         </div>
     </section>
-    <div class="pagina nav ul">
-        <a href="index.html">1</a>
-        <a href="cotacao.html">2</a>
-    </div>
     </main>
 
     <footer>
@@ -89,11 +90,6 @@
         </section>
         <h5>&copy; 2025 CrypterraX. Todos os direitos reservados. 🚀</h5>
     </footer>
-
-
-
-
-
     <script>
         async function converter() {
             const valor = document.getElementById("valor").value;

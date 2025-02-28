@@ -17,6 +17,11 @@ header {
     padding: 20px;
 }
 
+.img-header {
+    text-decoration: none;
+    color: #fff;
+}
+
 nav ul {
     list-style: none;
     padding: 10px;
@@ -155,6 +160,126 @@ img {
     height: auto;
 }
 
+.pagina {
+
+    scale: 1.5;
+    width: 45px;
+    padding: 8px;
+    padding-left: 5px;
+    background-color: #0f3460;
+    border: 3px solid black;
+    text-align: center;
+    margin-left: 49%;
+    display: flex;
+
+}
+
+
+/* configuraçao de ancora <a> */
+.pagina a,
+.square a {
+    flex-direction: column;
+    align-items: right;
+    padding-right: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+.botoes {
+    margin-top: 10px;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+#comentarios {
+    margin-top: 20px;
+    width: 600px;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    resize: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #16213e;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os vídeos quebrem linha */
+    justify-content: center;
+    /* Centraliza os vídeos */
+    gap: 20px;
+    /* Espaço entre os vídeos */
+    max-width: 100%;
+    /* Garante que não ultrapasse a tela */
+    padding: 10px;
+}
+
+.video-container iframe {
+    width: 50%;
+    /* Ocupa quase metade da tela para ficarem lado a lado */
+    height: 200px;
+    width: 350px;
+}
+
+.video {
+    max-width: 50%;
+}
+
+.video iframe {
+    width: 100%;
+    height: 315px;
+}
+
+.noticias {
+    margin-left: 35%;
+}
+
+#mais_noticias {
+    margin-left: 40%;
+}
+
+#cliqueaqui {
+    margin-left: 45%;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
 /* Responsividade */
 @media (max-width: 768px) {
     .main {
@@ -164,45 +289,39 @@ img {
     .box {
         padding: 15px;
     }
-    nav ul {
+    .noticias {
+        font-size: 15px;
+    }
+
+    #mais_noticias {
+        margin-left: 50px;
+    }
+
+    #cliqueaqui {
+        margin-left: 90px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .video-container {
         flex-direction: column;
         align-items: center;
     }
-}
 
-.pagina {
-
-    scale: 1.5;
-    width: 52px;
-    padding: 8px;
-    padding-left: 8px;
-    background-color: #0f3460;
-    border: 3px solid black;
-    text-align: left;
-    margin-left: 48%;
-    display: block;
-    
-}
-
-a {
-    flex-direction: column;
-    align-items: center;
-    padding-right: 200px;
-    color: #ffffff;
-    text-decoration: none;
-}
-.marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: moveText 10s linear infinite;
-}
-
-@keyframes moveText {
-    from {
-        transform: translate(100%);
+    textarea {
+        width: 30%;
+        height: 30px;
+        margin-top: 10px;
+        padding: 5px;
+        resize: none;
     }
-    to {
-        transform: translateX(-100%);
+
+    .video-container iframe {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
