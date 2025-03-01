@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CrypterraX - Home</title>
+    <link rel="icon"
+        href="imagens/DALL·E 2025-02-25 14.41.04 - A simple, clean, and modern logo for 'CrypterraX', a cryptocurrency brand. The design should use a sleek, sans-serif font with a minimalist approach. .webp"
+        alt="Logotipo futurista e minimalista para CrypterraX, com linhas geométricas brancas e azuladas em um fundo escuro. O design remete a blockchain e tecnologia, transmitindo um visual moderno e sofisticado">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
+    <header>
+        <a href="./index.html" class="img-header"> <img
+                src="imagens/DALL·E 2025-02-25 14.41.04 - A simple, clean, and modern logo for 'CrypterraX', a cryptocurrency brand. The design should use a sleek, sans-serif font with a minimalist approach. .webp"
+                width="200" height="200" alt="CrypterraX logo">
+            <h1>CrypterraX</h1>
+        </a>
+
+        <br>
+        <h2 style="text-align: center;">TRANSFORMANDO SEU HOJE PARA UM FUTURO FINANCEIRO SEM FRONTEIRAS</h2>
+    </header>
+    <nav>
+        <ul type="square">
+            <li><a href="index.html" class="marquee">Home</a></li>
+            <li><a href="cotacao.html" class="marquee">Converter Dinheiro em Bitcoin</a></li>
+            <li><a href="blog.html" class="marquee">Notícias</a></li>
+            <li><a href="sobre.html" class="marquee">Cryptomoeda</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="Sobre" class="main">
+            <div class="box">
+                <h2 class="noticias_blog">NOTÍCIAS - CRYPTOMOEDA</h2>
+                
+                <section id="noticias_links">
+                    <br>
+                    <ul id="feedNoticias"></ul>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        async function traduzirTexto(texto) {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt&dt=t&q=${encodeURIComponent(texto)}`;
+    
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        return data[0][0][0]; // Retorna a tradução
+    } catch (error) {
+        console.error("Erro na tradução:", error);
+        return texto; // Retorna o original se houver erro
+    }
+}
+
+async function carregarNoticias() {
+    const url = "https://cryptopanic.com/api/v1/posts/?public=true";
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+
+        let listaNoticias = document.getElementById("feedNoticias");
+        listaNoticias.innerHTML = ""; // Limpa antes de carregar
+
+        for (let noticia of data.results) {
+            let tituloTraduzido = await traduzirTexto(noticia.title);
+            let item = document.createElement("li");
+            item.innerHTML = `<a href="${noticia.url}" target="_blank">${tituloTraduzido}</a>`;
+            listaNoticias.appendChild(item);
+        }
+    } catch (error) {
+        console.error("Erro ao carregar notícias:", error);
+    }
+}
+
+carregarNoticias();
+    </script>
+    <footer>
+        <section id="Contato">
+            <h2>Contato</h2>
+            <h4>Email: fellipeducciniultra@gmail.com</h4>
+            <h4>Telefone: +55 (21) 99149-4917</h4>
+            <br>
+        </section>
+        <h5>&copy; 2025 CrypterraX. Todos os direitos reservados. 🚀</h5>
+    </footer>
     
 </body>
 </html>
