@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CrypterraX - Cotação</title>
     <link rel="icon"
-        href="imagens/DALL·E 2025-02-25 14.41.04 - A simple, clean, and modern logo for 'CrypterraX', a cryptocurrency brand. The design should use a sleek, sans-serif font with a minimalist approach. .webp"
+        href="imagens/imagens/logotipo.webp"
         alt="Logotipo futurista e minimalista para CrypterraX, com linhas geométricas brancas e azuladas em um fundo escuro. O design remete a blockchain e tecnologia, transmitindo um visual moderno e sofisticado">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -18,21 +18,49 @@
                 width="200" height="200" alt="CrypterraX logo">
             <h1>CrypterraX</h1>
         </a>
+        <!-- Botão do Menu -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
+        <!-- Menu Lateral -->
+        <div id="sideMenu" class="side-menu">
+            <span class="close-btn" onclick="toggleMenu()">×</span>
+            <ul type="square">
+                <a href="formulario.html" class="highlight">Cadastro</a>
+                <a href="index.html" class="marquee">Home</a>
+                <a href="cotacao.html" class="marquee">Converter Dinheiro em Bitcoin</a>
+                <a href="blog.html" class="marquee">Notícias</a>
+                <a href="sobre.html" class="marquee">Cryptomoeda</a>
+
+            </ul>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                var sideMenu = document.getElementById("sideMenu");
+                var currentPosition = sideMenu.style.right;
+                if (currentPosition === "0px") {
+                    sideMenu.style.right = "-250px"; // Esconde o menu
+                } else {
+                    sideMenu.style.right = "0"; // Mostra o menu
+                }
+            }
+        </script>
         <br>
         <h2 style="text-align: center;">TRANSFORMANDO SEU HOJE PARA UM FUTURO FINANCEIRO SEM FRONTEIRAS</h2>
     </header>
     <nav>
         <ul type="square">
             <li><a href="index.html" class="marquee">Home</a></li>
-            <li><a href="cotacao.html">Converter Dinheiro em Bitcoin</a></li>
-            <li><a href="blog.html">Notícias</a></li>
+            <li><a href="cotacao.html" class="marquee">Converter Dinheiro em Bitcoin</a></li>
+            <li><a href="blog.html" class="marquee">Notícias</a></li>
             <li><a href="sobre.html" class="marquee">Cryptomoeda</a></li>
+            <li><a href="formulario.html" class="marquee">Cadastro</a></li>
+
         </ul>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="main">
-        <script type="text/javascript"
+        <script type="text/javascript" id="escala"
             src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
                 {
                     "colorTheme": "dark",
@@ -48,9 +76,9 @@
                                                             {
                                                                 "name": "Criptomoedas",
                                                                 "symbols": [
-                                                                    { "name": "BINANCE:BTCUSDT" },
-                                                                    { "name": "BINANCE:ETHUSDT" },
-                                                                    { "name": "BINANCE:XRPUSDT" }
+                                                                    { "name": "BINANCE:BTCUSDT", "displayName": "Bitcoin" },
+                                                                    { "name": "BINANCE:ETHUSDT", "displayName": "Ethereum" },
+                                                                    { "name": "BINANCE:BNBUSDT", "displayName": "Binance Coin" }
                                                                 ]
                                                             }
                                                         ]
@@ -67,7 +95,7 @@
                 <option value="btc">Bitcoin (BTC)</option>
                 <option value="eth">Ethereum (ETH)</option>
                 <option value="ltc">Litecoin (LTC)</option>
-                <option value="xrp">Ripple (XRP)</option> <!-- Adicionado Ripple -->
+                <option value="xrp">Ripple (XRP)</option>
             </select>
             <br>
             <label for="valor">Valor em Reais (BRL):</label>

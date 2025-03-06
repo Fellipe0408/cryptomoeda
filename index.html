@@ -14,13 +14,39 @@
 <body>
     <header>
         <a href="./index.html" class="img-header"> <img
-                src="imagens/DALL·E 2025-02-25 14.41.04 - A simple, clean, and modern logo for 'CrypterraX', a cryptocurrency brand. The design should use a sleek, sans-serif font with a minimalist approach. .webp"
+                src="imagens/imagens/logotipo.webp"
                 width="200" height="200" alt="CrypterraX logo">
             <h1>CrypterraX</h1>
+            <br>
+            <h2 style="text-align: center;">TRANSFORMANDO SEU HOJE PARA UM FUTURO FINANCEIRO SEM FRONTEIRAS</h2>
         </a>
+        <!-- Botão do Menu -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-        <br>
-        <h2 style="text-align: center;">TRANSFORMANDO SEU HOJE PARA UM FUTURO FINANCEIRO SEM FRONTEIRAS</h2>
+        <!-- Menu Lateral -->
+        <div id="sideMenu" class="side-menu">
+            <span class="close-btn" onclick="toggleMenu()">×</span>
+            <ul type="square">
+                <a href="formulario.html" class="highlight">Cadastro</a>
+                <a href="index.html" class="marquee">Home</a>
+                <a href="cotacao.html" class="marquee">Converter Dinheiro em Bitcoin</a>
+                <a href="blog.html" class="marquee">Notícias</a>
+                <a href="sobre.html" class="marquee">Cryptomoeda</a>
+
+            </ul>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                var sideMenu = document.getElementById("sideMenu");
+                var currentPosition = sideMenu.style.right;
+                if (currentPosition === "0px") {
+                    sideMenu.style.right = "-250px"; // Esconde o menu
+                } else {
+                    sideMenu.style.right = "0"; // Mostra o menu
+                }
+            }
+        </script>
     </header>
     <nav>
         <ul type="square">
@@ -28,6 +54,8 @@
             <li><a href="cotacao.html" class="marquee">Converter Dinheiro em Bitcoin</a></li>
             <li><a href="blog.html" class="marquee">Notícias</a></li>
             <li><a href="sobre.html" class="marquee">Cryptomoeda</a></li>
+            <li><a href="formulario.html" class="marquee">Cadastro</a></li>
+
         </ul>
     </nav>
     <main>
@@ -54,18 +82,18 @@
                 <br>
                 <h3 id="mais_noticias">Para mais noticias:</h3> <br>
                 <a href="blog.html" id="cliqueaqui">Clique aqui</a><br><br><br>
-                
 
-                <div id="comentarios">
-                    <h3>Comentários:</h3>
+
+                <div id="comentariosgeral">
+                    <h3 class="comenta">Comentários:</h3>
                     <textarea id="comentarioInput" placeholder="Escreva um comentário..."></textarea> <br>
-                    <button onclick="adicionarComentario()">Comentar</button>
+                    <button onclick="adicionarComentario()" id="comentar">Comentar</button>
                     <ul id="listaComentarios"></ul>
                 </div>
                 <br> <br>
                 <!-- <hr style="border: 2px solid black; margin: 00px 200;"> -->
                 <br>
-                
+
             </div>
 
 
@@ -91,6 +119,7 @@
 
                     let listaComentarios = document.getElementById("listaComentarios");
                     let novoComentario = document.createElement("li");
+                    novoComentario.classList.add("comment"); // Adiciona a classe ao comentário
                     novoComentario.textContent = comentarioTexto;
                     listaComentarios.appendChild(novoComentario);
 
