@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CrypterraX - Cadastro</title>
-    <link rel="icon"
-        href="imagens/imagens/logotipo.webp"
+    <link rel="icon" href="imagens/logotipo.webp"
         alt="Logotipo futurista e minimalista para CrypterraX, com linhas geométricas brancas e azuladas em um fundo escuro. O design remete a blockchain e tecnologia, transmitindo um visual moderno e sofisticado">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="@media">
     <header>
-        <a href="./index.html" class="img-header"> <img
-                src="imagens/logotipo.webp.webp"
-                width="200" height="200" alt="CrypterraX logo">
+        <a href="./index.html" class="img-header"> <img src="imagens/logotipo.webp" width="200" height="200"
+                alt="CrypterraX logo">
             <h1>CrypterraX</h1>
         </a>
         <!-- Botão do Menu -->
@@ -61,7 +59,8 @@
     <div class="container">
         <div class="form-container">
             <h2>Cadastro</h2>
-            <form action="#" method="POST">
+            <br>
+            <form id="formCadastro">
                 <div class="input-group">
                     <label for="name">Nome Completo</label>
                     <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
@@ -85,12 +84,13 @@
                 <div class="input-group">
                     <label for="termos">
                         <input type="checkbox" id="termos" name="termos" required />
-                        Eu aceito os <a href="termos&condicoes.html">Termos</a> & <a href="termos&condicoes.html">Condições</a>
+                        Eu aceito os <a href="termos&condicoes.html">Termos</a> & <a
+                            href="termos&condicoes.html">Condições</a>
                     </label>
                 </div>
-            
+
                 <div class="input-group">
-                    <button type="submit" class="btn-submit"> <a ref="">Cadastrar</a></button>
+                    <button type="submit" class="btn-submit">Cadastrar</button>
 
                 </div>
                 <div class="form-footer">
@@ -98,19 +98,7 @@
                 </div>
             </form>
             <div id="mensagem" style="display: none;">
-                <script>
-                    document.getElementById('formCadastro').addEventListener('submit', function (e) {
-                        e.preventDefault(); // Evita o envio do formulário para recarregar a página
-                        const termos = document.getElementById('termos');
-
-                        if (termos.checked) {
-                            document.getElementById('formCadastro').style.display = 'none'; // Esconde o formulário
-                            document.getElementById('mensagem').style.display = 'block'; // Exibe a mensagem
-                        } else {
-                            alert('Você precisa aceitar os termos e condições!');
-                        }
-                    });
-                </script>
+                <p>✅ Você foi cadastrado com sucesso!</p>
             </div>
         </div>
     </div>
@@ -125,5 +113,19 @@
     </footer>
 
 </body>
+<script>
+    document.getElementById('formCadastro').addEventListener('submit', function (e) {
+        e.preventDefault(); // Impede o envio para outra página
+
+        const termos = document.getElementById('termos');
+
+        if (termos.checked) {
+            document.getElementById('formCadastro').style.display = 'none'; // Esconde o formulário
+            document.getElementById('mensagem').style.display = 'block'; // Exibe a mensagem
+        } else {
+            alert('Você precisa aceitar os termos e condições!');
+        }
+    });
+</script>
 
 </html>

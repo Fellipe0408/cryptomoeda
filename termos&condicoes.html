@@ -10,7 +10,7 @@
 
 <body>
     <div class="termos-container">
-        <h1>📜 Termos e Condições - Site de Criptomoedas</h1>
+        <h1>📜 Termos e Condições - CrypterraX</h1>
 
         <div class="termos-content">
             <h2>1. Aceitação dos Termos</h2>
@@ -53,22 +53,48 @@
                 não pode copiar, distribuir ou modificar nosso conteúdo sem autorização prévia.</p>
 
             <h2>9. Limitação de Responsabilidade</h2>
-            <p>Não somos responsáveis por perdas financeiras, danos diretos ou indiretos causados pelo uso das informações do site.<br>
+            <p>Não somos responsáveis por perdas financeiras, danos diretos ou indiretos causados pelo uso das
+                informações do site.<br>
                 O usuário compreende que o mercado de criptomoedas é volátil e imprevisível.</p>
 
             <h2>10. Links para Terceiros</h2>
-            <p>Nosso site pode conter links para plataformas externas. Não nos responsabilizamos pelo conteúdo, segurança ou políticas desses sites.</p>
+            <p>Nosso site pode conter links para plataformas externas. Não nos responsabilizamos pelo conteúdo,
+                segurança ou políticas desses sites.</p>
 
             <h2>11. Contato</h2>
             <p>Se tiver dúvidas, entre em contato através de fellipeducciniultra@gmail.com e/ou (21) 99149-4917.</p>
         </div>
 
         <div class="termos-footer">
-            <button id="botao-continuar">Voltar pra página principal</button>
+            <input type="checkbox" id="aceito-termos">
+            <label for="aceito-termos">Eu li e aceito os Termos e Condições</label>
+            <button id="botao-continuar" disabled>Continuar</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkbox = document.getElementById("aceito-termos");
+            const botao = document.getElementById("botao-continuar");
+
+            checkbox.addEventListener("change", function () {
+                if (checkbox.checked) {
+                    botao.classList.add("enabled");
+                    botao.disabled = false;
+                } else {
+                    botao.classList.remove("enabled");
+                    botao.disabled = true;
+                }
+            });
+
+            botao.addEventListener("click", function () {
+                if (checkbox.checked) {
+                    window.location.href = "formulario.html"; // Redireciona para a página inicial ou outra desejada
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>

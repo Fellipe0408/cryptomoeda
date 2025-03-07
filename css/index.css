@@ -370,6 +370,18 @@ li {
     transition: background-color 0.3s, transform 0.3s;
     z-index: 99;
 }
+.menu {
+    display: flex;
+    align-items: center;
+}
+.input-group {
+    text-decoration:none;
+    color: #b0b0b0;
+    cursor: pointer;
+}
+.input-group a:hover {
+    color: #ffcc00;
+}
 
 .side-menu a {
     display: block;
@@ -423,7 +435,6 @@ li {
     width: 100%;
 }
 
-/* Estilos do Formulário */
 /* Estilos do Formulário */
 .form-container {
     background-color:#0f3460;
@@ -600,13 +611,13 @@ textarea {
     }
 
     .noticias_blog {
-        font-size: 14.5px;
+        font-size: 17.1px;
         margin-left: 1px;
         color: #fff;
         background: #16213e;
         padding: 10px;
         border-radius: 5px;
-        margin-right: -5px;
+        margin-right: -3px;
     }
 
 
@@ -617,12 +628,12 @@ textarea {
 
     .noticias {
         font-size: 20px;
-        margin-left: 1px;
+        margin-left: 10px;
         color: #fff;
         background: #16213e;
         padding: 10px;
         border-radius: 5px;
-        margin-right: -5px;
+        margin-right: 20px;
     }
 
     .menu-icon {
@@ -702,7 +713,7 @@ textarea {
     }
 
     #cliqueaqui {
-        margin-left: 90px;
+        margin-left: 80px;
         text-decoration: none;
         color: #fff;
     }
