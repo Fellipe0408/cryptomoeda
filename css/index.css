@@ -329,7 +329,7 @@ li {
 #feedNoticias a {
     color: white;
     /* Deixa os links brancos */
-    text-decoration: none;
+    text-decoration: underline;
     /* Remove o sublinhado */
 }
 
@@ -370,17 +370,20 @@ li {
     transition: background-color 0.3s, transform 0.3s;
     z-index: 99;
 }
+
 .menu {
     display: flex;
     align-items: center;
 }
-.input-group {
-    text-decoration:none;
-    color: #b0b0b0;
-    cursor: pointer;
+
+.termoscondicoes {
+    text-decoration: none underline;
+    color: gray;
 }
+
 .input-group a:hover {
-    color: #ffcc00;
+    text-decoration: none;
+    color: lightskyblue;
 }
 
 .side-menu a {
@@ -437,7 +440,7 @@ li {
 
 /* Estilos do Formulário */
 .form-container {
-    background-color:#0f3460;
+    background-color: #0f3460;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -451,12 +454,13 @@ li {
     transform: scale(1.05);
 }
 
-#cadastro {
+.cadastrar {
     text-align: center;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: #00d4ff;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .input-group {
@@ -488,7 +492,10 @@ label {
     box-shadow: 0 0 5px rgba(0, 212, 255, 0.8);
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
     font-size: 16px;
     padding: 12px;
     border: 2px solid #444;
@@ -499,7 +506,10 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
     border-color: #00d4ff;
     box-shadow: 0 0 5px rgba(0, 212, 255, 0.8);
 }
