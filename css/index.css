@@ -532,6 +532,31 @@ textarea {
     font-weight: bold;
 }
 
+.linkcadastro {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.linkcadastro a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    height: 30px;
+    width: 90px;
+    padding: 5px;
+    scale: 1.2;
+    margin-right: 10px;
+}
+
+.linkcadastro a:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
 .btn-submit:hover {
     background-color: #ff9900;
     transform: scale(1.05);
@@ -572,6 +597,10 @@ textarea {
     .btn-submit {
         font-size: 16px;
     }
+
+    .linkcadastro {
+        display: none;
+    }
 }
 
 
@@ -580,6 +609,7 @@ textarea {
 
     /* Mostrar o ícone do menu e o menu lateral apenas em telas pequenas */
     .menu-icon {
+        
         display: none;
         /* Mostra o ícone do menu */
     }
@@ -618,6 +648,7 @@ textarea {
     /* Esconde o ícone do menu em telas maiores */
     .menu-icon {
         display: center;
+        
     }
 
     .noticias_blog {
@@ -651,7 +682,7 @@ textarea {
         position: center;
         top: 20px;
         right: 20px;
-        background-color: #007BFF;
+        background-color: black;
         color: white;
         padding: 12px 15px;
         border-radius: 50%;
@@ -663,8 +694,8 @@ textarea {
     }
 
     .menu-icon:hover {
-        background-color: #0056b3;
-        transform: scale(1.1);
+        background-color: black;
+        transform: scale(1.2);
     }
 
     .side-menu {
