@@ -32,7 +32,7 @@ h1 {
 
 h2 {
     color: #ffffff;
-    border-bottom: 2px solid #00aaff; /* Linha azul clara */
+    border-bottom: 2px solid lightblue; /* Linha azul clara */
     padding-bottom: 5px;
 }
 
